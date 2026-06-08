@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Checkpoint VII - Listagem de Alunos";
+}
+
+<div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 450px; margin: 50px auto; padding: 30px; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); background-color: #ffffff;">
+    
+    <h3 style="color: #007bff; text-align: center; margin-bottom: 5px; font-weight: 600;">📋 Cadastro Acadêmico (Checkpoint VII)</h3>
+    <p style="text-align: center; font-size: 13px; color: #777; margin-top: 0; margin-bottom: 25px;">Dados carregados via <strong>List&lt;string&gt;</strong></p>
+    
+    <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
+
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        @foreach (var aluno in ViewBag.ListaDeAlunos)
+        {
+            <li style="padding: 12px 16px; background-color: #f8f9fa; border: 1px solid #e2e8f0; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; color: #333; font-weight: 500; font-size: 15px;">
+                <span style="font-size: 18px;">👤</span> @aluno
+            </li>
+        }
+    </ul>
+</div>
